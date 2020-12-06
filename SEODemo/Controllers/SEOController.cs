@@ -27,14 +27,6 @@ namespace SEODemo.Controllers
             _logger = logger;
         }
 
-        //urlencode
-        [HttpGet]
-        public int Get()
-        {
-            var a = _appSettings.Value.Scope;
-            return a;
-        }
-
         [HttpPost]
         public async Task<string> Post([FromBody] SEORequest request)
         {
