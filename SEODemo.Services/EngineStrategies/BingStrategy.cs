@@ -24,7 +24,7 @@ namespace SEODemo.Services.EngineStrategies
         {
             int pages = _scope % _itemsPerPage == 0 ? _scope / _itemsPerPage : _scope / _itemsPerPage + 1;
             List<Task<List<int>>> tasks = new List<Task<List<int>>>();
-            for (int pageNum = 1; pageNum < pages; pageNum++)
+            for (int pageNum = 1; pageNum <= pages; pageNum++)
             {
                 var url = GenerateUrl(query, _itemsPerPage, _itemsPerPage * (pageNum - 1) + 1);
                 tasks.Add(SearchAsync(target, url));
