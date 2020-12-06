@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEODemo", "SEODemo\SEODemo.csproj", "{35544208-3D65-4F1F-B128-08585A5768D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEODemo.Services", "SEODemo.Services\SEODemo.Services.csproj", "{9BBD8DDE-EC97-4546-ABA4-B76038C4D024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEODemo.Services", "SEODemo.Services\SEODemo.Services.csproj", "{9BBD8DDE-EC97-4546-ABA4-B76038C4D024}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEODemo.Test", "SEODemo.Test\SEODemo.Test.csproj", "{6CA590D8-879E-4030-990B-294438D091CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEODemo.Test", "SEODemo.Test\SEODemo.Test.csproj", "{6CA590D8-879E-4030-990B-294438D091CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEODemo.Data", "SEODemo.Data\SEODemo.Data.csproj", "{1FE85908-2470-4A2A-9DA3-A6F38C4296F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{6CA590D8-879E-4030-990B-294438D091CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CA590D8-879E-4030-990B-294438D091CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CA590D8-879E-4030-990B-294438D091CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE85908-2470-4A2A-9DA3-A6F38C4296F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE85908-2470-4A2A-9DA3-A6F38C4296F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE85908-2470-4A2A-9DA3-A6F38C4296F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE85908-2470-4A2A-9DA3-A6F38C4296F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

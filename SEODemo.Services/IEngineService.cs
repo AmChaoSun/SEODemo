@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEODemo.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace SEODemo.Services
     public interface IEngineService
     {
         public void SetEngineStrategy(string engine, int scope);
-        public Task<string> GetSEOResult(string query, string target);
+        public Task<string> GetSEOResult(string query, string target, string engine);
+
+        public IEnumerable<SEOResult> GetAll();
     }
 }

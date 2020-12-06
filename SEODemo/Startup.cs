@@ -6,10 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SEODemo.Data;
+using SEODemo.Data.Repositories;
 using SEODemo.Models;
 using SEODemo.Services;
 using Serilog;
@@ -32,7 +35,9 @@ namespace SEODemo
             services.AddControllers();
 
             //Customize DIs
+            services.AddDbContext<SEOContext>(options => options.UseInMemoryDatabase(databaseName: "SEOResults"));
             services.AddScoped<IEngineService, EngineService>();
+            services.AddScoped<ISEORepository, SEORepository>();
             services.Configure<SEOSettingsModel>(Configuration.GetSection("SEOSettings"));
 
             //swagger

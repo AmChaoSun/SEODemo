@@ -1,4 +1,6 @@
-﻿using SEODemo.Services.EngineStrategies;
+﻿using SEODemo.Data.Models;
+using SEODemo.Data.Repositories;
+using SEODemo.Services.EngineStrategies;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -10,17 +12,25 @@ namespace SEODemo.Services
     public class EngineService : IEngineService
     {
         public EngineStrategy _engineStrategy;
+        private readonly ISEORepository _repo;
 
-        //add db things
-        public EngineService()
+        public EngineService(ISEORepository repo)
         {
-            //repo
+            _repo = repo;
         }
 
-        public async Task<string> GetSEOResult(string query, string target)
+        public async Task<string> GetSEOResult(string query, string target, string engine)
         {
-            return await _engineStrategy.GetSEOResult(query, target);
-            //repo.save
+            var result = await _engineStrategy.GetSEOResult(query, target);
+            await _repo.AddAsync(new SEOResult
+            {
+                Query = query,
+                Target = target,
+                Engine = engine,
+                Result = result,
+                DateTime = DateTime.Now
+            });
+            return result;
         }
 
         public void SetEngineStrategy(string engine, int scope)
@@ -39,6 +49,11 @@ namespace SEODemo.Services
             {
                 throw new Exception(String.Format("Failed to create engine strategy for engine : {0}, scope : {1}", engine, scope));
             }
+        }
+
+        public IEnumerable<SEOResult> GetAll()
+        {
+            return _repo.GetAll();
         }
     }
 }

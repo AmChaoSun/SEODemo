@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -27,6 +28,12 @@ namespace SEODemo.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok(_service.GetAll());
+        }
+
         [HttpPost]
         public async Task<string> Post([FromBody] SEORequest request)
         {
@@ -34,7 +41,7 @@ namespace SEODemo.Controllers
             {
                 _service.SetEngineStrategy(request.Engine, _appSettings.Value.Scope);
                 var query = WebUtility.UrlEncode(request.Input);
-                return await _service.GetSEOResult(query, request.Target);
+                return await _service.GetSEOResult(query, request.Target, request.Engine);
             }
             catch (Exception ex)
             {

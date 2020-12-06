@@ -1,4 +1,7 @@
-﻿using SEODemo.Services;
+﻿using Moq;
+using SEODemo.Data;
+using SEODemo.Data.Repositories;
+using SEODemo.Services;
 using SEODemo.Services.EngineStrategies;
 using SEODemo.Test.EngineServiceTests.TestData;
 using System;
@@ -11,10 +14,10 @@ namespace SEODemo.Test.EngineServiceTests
     public class EngineServiceTests
     {
         private readonly EngineService _service;
-
+        Mock<ISEORepository> mockRepo = new Mock<ISEORepository>();
         public EngineServiceTests()
         {
-            _service = new EngineService();
+            _service = new EngineService(mockRepo.Object);
         }
 
         [Theory]

@@ -5,11 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.0" />
     <PackageReference Include="NSwag.AspNetCore" Version="13.9.4" />
     <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SEODemo.Data\SEODemo.Data.csproj" />
     <ProjectReference Include="..\SEODemo.Services\SEODemo.Services.csproj" />
   </ItemGroup>
 
