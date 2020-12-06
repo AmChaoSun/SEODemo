@@ -61,12 +61,8 @@ namespace SEODemo
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //var serilogLogger = new LoggerConfiguration()
-            //    .ReadFrom.Configuration(Configuration)
-            //    .CreateLogger();
-            //loggerFactory.AddSerilog(serilogLogger);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
