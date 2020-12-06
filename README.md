@@ -8,14 +8,14 @@ Currently, only three kinds of search engines are supported:\
 2.Google\
 3.Bing
 
-# Features:
+# Features
 1.Strategy Pattern is the main pattern for services.\
 2.Repository Pattern has been adapt to Database layer.(In-memory database used)\
 3.Unit test project with Xunit and Moq\
 4.Swagger page endpoint as default starting endpoint(NSwagger)\
 5.Logging via Serilog(write to local file)
 
-#API Example for post Search method\
+# API Example for post Search method
 /api/SEO\
 {\
   "engine": "Bing",\
@@ -25,7 +25,7 @@ Currently, only three kinds of search engines are supported:\
 Note: for "engine" parameter, only "Bing", "InfoTrackGoogle", "Google" are valid for now.\
 POST method can be checked with the frontend project while GET method can only be verified via Swagger
 
-# Future Improvements:
+# Future Improvements
 1.More unit tests\
 2.More logs\
 3.GetAll() Method can be moved to places other than in EngineService, not quite fit my original design for EngineService\
