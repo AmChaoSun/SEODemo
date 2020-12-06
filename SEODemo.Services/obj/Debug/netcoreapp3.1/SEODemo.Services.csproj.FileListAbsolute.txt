@@ -1,0 +1,8 @@
+C:\Users\61452\source\repos\SEODemo\SEODemo.Services\obj\Debug\netcoreapp3.1\SEODemo.Services.AssemblyInfoInputs.cache
+C:\Users\61452\source\repos\SEODemo\SEODemo.Services\obj\Debug\netcoreapp3.1\SEODemo.Services.AssemblyInfo.cs
+C:\Users\61452\source\repos\SEODemo\SEODemo.Services\obj\Debug\netcoreapp3.1\SEODemo.Services.csproj.CoreCompileInputs.cache
+C:\Users\61452\source\repos\SEODemo\SEODemo.Services\bin\Debug\netcoreapp3.1\SEODemo.Services.deps.json
+C:\Users\61452\source\repos\SEODemo\SEODemo.Services\bin\Debug\netcoreapp3.1\SEODemo.Services.dll
+C:\Users\61452\source\repos\SEODemo\SEODemo.Services\bin\Debug\netcoreapp3.1\SEODemo.Services.pdb
+C:\Users\61452\source\repos\SEODemo\SEODemo.Services\obj\Debug\netcoreapp3.1\SEODemo.Services.dll
+C:\Users\61452\source\repos\SEODemo\SEODemo.Services\obj\Debug\netcoreapp3.1\SEODemo.Services.pdb
