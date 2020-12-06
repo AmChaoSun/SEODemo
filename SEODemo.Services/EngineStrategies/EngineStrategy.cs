@@ -9,7 +9,7 @@ namespace SEODemo.Services.EngineStrategies
 {
     public abstract class EngineStrategy : IEngineStrategy
     {
-        static HttpClient _client = new HttpClient();
+        static readonly HttpClient _client = new HttpClient();
 
         // <summary>
         /// The number of records being searched
@@ -56,8 +56,7 @@ namespace SEODemo.Services.EngineStrategies
             }
             catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
         }
         public virtual string GenerateUrl() => _baseUrl;

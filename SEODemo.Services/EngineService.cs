@@ -35,9 +35,8 @@ namespace SEODemo.Services
             {
                 return (EngineStrategy)Activator.CreateInstance(Type.GetType($"SEODemo.Services.EngineStrategies.{engine}Strategy"), args);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                //log
                 throw new Exception(String.Format("Failed to create engine strategy for engine : {0}, scope : {1}", engine, scope));
             }
         }

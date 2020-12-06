@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SEODemo.Models;
 using SEODemo.Services;
@@ -18,10 +19,12 @@ namespace SEODemo.Controllers
     {
         private readonly IEngineService _service;
         private readonly IOptions<SEOSettingsModel> _appSettings;
-        public SEOController(IEngineService service, IOptions<SEOSettingsModel> appSettings)
+        private readonly ILogger _logger;
+        public SEOController(IEngineService service, IOptions<SEOSettingsModel> appSettings, ILogger<SEOController> logger)
         {
             _service = service;
             _appSettings = appSettings;
+            _logger = logger;
         }
 
         //urlencode
@@ -35,9 +38,18 @@ namespace SEODemo.Controllers
         [HttpPost]
         public async Task<string> Post([FromBody] SEORequest request)
         {
-            _service.SetEngineStrategy(request.Engine, _appSettings.Value.Scope);
-            var query = WebUtility.UrlEncode(request.Input);
-            return await _service.GetSEOResult(query, request.Target);
+            try
+            {
+                _service.SetEngineStrategy(request.Engine, _appSettings.Value.Scope);
+                var query = WebUtility.UrlEncode(request.Input);
+                return await _service.GetSEOResult(query, request.Target);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return "Internal Error";
+            }
+            
         }
     }
 }

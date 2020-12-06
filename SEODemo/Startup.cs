@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SEODemo.Models;
 using SEODemo.Services;
+using Serilog;
 
 namespace SEODemo
 {
@@ -60,12 +61,18 @@ namespace SEODemo
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            //var serilogLogger = new LoggerConfiguration()
+            //    .ReadFrom.Configuration(Configuration)
+            //    .CreateLogger();
+            //loggerFactory.AddSerilog(serilogLogger);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSerilogRequestLogging();
 
             app.UseHttpsRedirection();
 
