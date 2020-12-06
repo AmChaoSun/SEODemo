@@ -1,0 +1,82 @@
+2020-12-06 19:40:08.975 +11:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2020-12-06 19:51:58.294 +11:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2020-12-06 19:53:05.311 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-06 19:53:05.316 +11:00 [INF] Hosting environment: Development
+2020-12-06 19:53:05.317 +11:00 [INF] Content root path: C:\Users\61452\source\repos\SEODemo\SEODemo
+2020-12-06 19:53:05.323 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger  
+2020-12-06 19:53:05.342 +11:00 [INF] HTTP GET /swagger responded 302 in 15.7321 ms
+2020-12-06 19:53:05.356 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger/index.html  
+2020-12-06 19:53:05.357 +11:00 [INF] Request finished in 36.8115ms 302 
+2020-12-06 19:53:05.470 +11:00 [INF] HTTP GET /swagger/index.html responded 200 in 114.1941 ms
+2020-12-06 19:53:05.471 +11:00 [INF] Request finished in 115.1719ms 200 text/html; charset=utf-8
+2020-12-06 19:53:05.573 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger/v1/swagger.json  
+2020-12-06 19:53:05.972 +11:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 399.2952 ms
+2020-12-06 19:53:05.972 +11:00 [INF] Request finished in 399.4724ms 200 application/json; charset=utf-8
+2020-12-06 19:53:09.884 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/api/SEO  
+2020-12-06 19:53:09.888 +11:00 [INF] Executing endpoint 'SEODemo.Controllers.SEOController.Get (SEODemo)'
+2020-12-06 19:53:09.901 +11:00 [INF] Route matched with {action = "Get", controller = "SEO"}. Executing controller action with signature Int32 Get() on controller SEODemo.Controllers.SEOController (SEODemo).
+2020-12-06 19:53:11.841 +11:00 [INF] Charles test
+2020-12-06 19:53:12.159 +11:00 [ERR] Charles test
+2020-12-06 19:53:13.787 +11:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2020-12-06 19:53:13.795 +11:00 [INF] Executed action SEODemo.Controllers.SEOController.Get (SEODemo) in 3891.4636ms
+2020-12-06 19:53:13.795 +11:00 [INF] Executed endpoint 'SEODemo.Controllers.SEOController.Get (SEODemo)'
+2020-12-06 19:53:13.795 +11:00 [INF] HTTP GET /api/SEO responded 200 in 3910.7020 ms
+2020-12-06 19:53:13.796 +11:00 [INF] Request finished in 3912.2064ms 200 application/json; charset=utf-8
+2020-12-06 19:54:56.266 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-06 19:54:56.272 +11:00 [INF] Hosting environment: Development
+2020-12-06 19:54:56.273 +11:00 [INF] Content root path: C:\Users\61452\source\repos\SEODemo\SEODemo
+2020-12-06 19:54:56.278 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger  
+2020-12-06 19:54:56.299 +11:00 [INF] HTTP GET /swagger responded 302 in 17.2019 ms
+2020-12-06 19:54:56.312 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger/index.html  
+2020-12-06 19:54:56.315 +11:00 [INF] Request finished in 38.5989ms 302 
+2020-12-06 19:54:56.430 +11:00 [INF] HTTP GET /swagger/index.html responded 200 in 118.6698 ms
+2020-12-06 19:54:56.431 +11:00 [INF] Request finished in 119.6395ms 200 text/html; charset=utf-8
+2020-12-06 19:54:56.537 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger/v1/swagger.json  
+2020-12-06 19:54:56.942 +11:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 405.5516 ms
+2020-12-06 19:54:56.942 +11:00 [INF] Request finished in 405.7457ms 200 application/json; charset=utf-8
+2020-12-06 19:55:05.818 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/api/SEO  
+2020-12-06 19:55:05.821 +11:00 [INF] Executing endpoint 'SEODemo.Controllers.SEOController.Get (SEODemo)'
+2020-12-06 19:55:05.834 +11:00 [INF] Route matched with {action = "Get", controller = "SEO"}. Executing controller action with signature Int32 Get() on controller SEODemo.Controllers.SEOController (SEODemo).
+2020-12-06 19:55:07.337 +11:00 [INF] Charles test
+2020-12-06 19:55:07.337 +11:00 [ERR] Charles test
+2020-12-06 19:55:07.340 +11:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2020-12-06 19:55:07.348 +11:00 [INF] Executed action SEODemo.Controllers.SEOController.Get (SEODemo) in 1511.0751ms
+2020-12-06 19:55:07.348 +11:00 [INF] Executed endpoint 'SEODemo.Controllers.SEOController.Get (SEODemo)'
+2020-12-06 19:55:07.348 +11:00 [INF] HTTP GET /api/SEO responded 200 in 1530.1039 ms
+2020-12-06 19:55:07.349 +11:00 [INF] Request finished in 1531.554ms 200 application/json; charset=utf-8
+2020-12-06 20:07:16.211 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-06 20:07:16.218 +11:00 [INF] Hosting environment: Development
+2020-12-06 20:07:16.218 +11:00 [INF] Content root path: C:\Users\61452\source\repos\SEODemo\SEODemo
+2020-12-06 20:07:16.223 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger  
+2020-12-06 20:07:16.241 +11:00 [INF] HTTP GET /swagger responded 302 in 14.9903 ms
+2020-12-06 20:07:16.250 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger/index.html  
+2020-12-06 20:07:16.253 +11:00 [INF] Request finished in 32.5544ms 302 
+2020-12-06 20:07:16.358 +11:00 [INF] HTTP GET /swagger/index.html responded 200 in 107.3446 ms
+2020-12-06 20:07:16.359 +11:00 [INF] Request finished in 108.2702ms 200 text/html; charset=utf-8
+2020-12-06 20:07:16.457 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger/v1/swagger.json  
+2020-12-06 20:07:16.854 +11:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 397.1395 ms
+2020-12-06 20:07:16.854 +11:00 [INF] Request finished in 397.3593ms 200 application/json; charset=utf-8
+2020-12-06 20:13:11.139 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-06 20:13:11.145 +11:00 [INF] Hosting environment: Development
+2020-12-06 20:13:11.146 +11:00 [INF] Content root path: C:\Users\61452\source\repos\SEODemo\SEODemo
+2020-12-06 20:13:11.151 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger  
+2020-12-06 20:13:11.171 +11:00 [INF] HTTP GET /swagger responded 302 in 16.3821 ms
+2020-12-06 20:13:11.186 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger/index.html  
+2020-12-06 20:13:11.190 +11:00 [INF] Request finished in 40.8455ms 302 
+2020-12-06 20:13:11.308 +11:00 [INF] HTTP GET /swagger/index.html responded 200 in 122.3881 ms
+2020-12-06 20:13:11.309 +11:00 [INF] Request finished in 123.2888ms 200 text/html; charset=utf-8
+2020-12-06 20:13:11.407 +11:00 [INF] Request starting HTTP/2.0 GET https://localhost:44384/swagger/v1/swagger.json  
+2020-12-06 20:13:11.809 +11:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 402.4674 ms
+2020-12-06 20:13:11.809 +11:00 [INF] Request finished in 402.6708ms 200 application/json; charset=utf-8
