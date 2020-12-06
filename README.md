@@ -30,6 +30,8 @@ POST method can be checked with the frontend project while GET method can only b
 2.More logs\
 3.GetAll() Method can be moved to places other than in EngineService, not quite fit my original design for EngineService\
 4.Authentication & Authorizatoin via JWT\
+5.Using query parameters for google and bings sometimes is not accurate, need to add some logic to make it perfect fit first 50.\
+6.More description on Swagger.\
 etc.
 
 Thanks for your time, feel free to contact me about what needs to be improved or added.
